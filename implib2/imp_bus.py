@@ -440,3 +440,15 @@ class Bus:
         time.sleep(self.cycle_wait)
 
         return self.res.set_epr_page(bytes_recv)
+
+    def get_tdr_scan(self, serno, scan_start, scan_end, scan_span, scan_count):
+        
+        package = self.cmd.do_tdr_scan(serno, scan_start, scan_end, scan_span, scan_count)
+        self.dev.write_pkg(package)
+        #self._wait(len(package))
+        # Accordind to protocol sniffer, it takes 8.5 seconds for 50 points
+        time.sleep(10)
+        bytes_recv = self.dev.read_pkg()
+        time.sleep(self.cycle_wait)
+
+        return self.res.do_tdr_scan(bytes_recv)

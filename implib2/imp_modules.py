@@ -64,7 +64,7 @@ class Module:
 
         self.event_modes = {
             "NormalMeasure":    0x00,
-            "TRDScan":          0x01,
+            "TDRScan":          0x01,
             "AnalogOut":        0x02,
             "ACIC_TC":          0x03,
             "SelfTest":         0x04,

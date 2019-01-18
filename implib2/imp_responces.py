@@ -2,7 +2,6 @@
 
 import struct
 
-
 class ResponceError(Exception):
     pass
 
@@ -72,7 +71,7 @@ class Responce:
                 scan_point['tdr'] = struct.unpack('<B', tuble[0])[0]
             else:
                 scan_point['tdr'] = tuble[0]
-            scan_point['time'] = struct.unpack('<f', tuble[1:5])[0]
+            scan_point['time'] = struct.unpack('<i', tuble[1:5])[0]
             scan[point] = scan_point
 
         return scan
