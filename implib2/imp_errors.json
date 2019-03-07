@@ -53,6 +53,7 @@
     "138": "Ratio divisor is zero",
     "150": "DAC code is too small",
     "151": "DAC code is too large",
+    "152": "Unknown",
 
     "200": "reserved",
     "201": "reserved",
