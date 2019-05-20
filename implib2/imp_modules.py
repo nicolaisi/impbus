@@ -390,6 +390,22 @@ class Module:
         param = 'HWVersion'
         return '{0:.2f}'.format(self.bus.get(self._serno, table, param)[0])
 
+    def set_hw_version(self, hw_version):
+        """Command to change the hardware version of the probe.
+
+        :param hw_version: Hardware Version number so use.
+        :type  hw_version: float
+
+        :rtype: bool
+
+        """
+        table = 'SYSTEM_PARAMETER_TABLE'
+        param = 'HWVersion'
+
+        self.unlock()
+
+        self.bus.set(self._serno, table, param, [hw_version])
+
     def get_fw_version(self):
         """Command to retrieve the firmware version number of the probe.
 
