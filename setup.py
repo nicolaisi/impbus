@@ -12,11 +12,11 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'implib2'
+NAME = 'impbus'
 DESCRIPTION = 'Python implementation of the IMPBUS-2 data transmission protocol.'
-URL = 'https://github.com/mhubig/implib2'
-EMAIL = 'mh@imko.de'
-AUTHOR = 'Markus Hubig'
+URL = 'https://github.com/nicolaisi/impbus'
+EMAIL = 'nicholas.tanjerome@imko.de'
+AUTHOR = 'Nicholas Tan Jerome'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -96,7 +96,7 @@ setup(
     classifiers=[
         # Trove classifiers
         # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.3',
