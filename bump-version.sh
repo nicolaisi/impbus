@@ -12,14 +12,14 @@ function commit_hint () {
 
 function update_version_implib () {
     sed -e "s/^__version__ = .*$/__version__ = '$1'/g" \
-        implib2/__version__.py > .__version__.new
+        impbus/__version__.py > .__version__.new
 }
 
 if ! update_version_implib $1; then
     echo "Could not replace version in '__version__.py'!" >&2
     exit 2
 else
-    mv .__version__.new implib2/__version__.py
+    mv .__version__.new impbus/__version__.py
 fi
 
 commit_hint $1
